@@ -1,68 +1,615 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#f4f1e8" /><meta name="description" content="Manav Tailor — Full Stack Software Engineer. Thoughtful interfaces, solid systems, and a little bit of play." />
-  <title>Manav Tailor® — Full Stack Software Developer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/styles.css" />
-</head>
-<body>
-  <a class="skip-link" href="#work">Skip to selected work</a>
-  <div class="page-progress" aria-hidden="true"><span></span></div>
-  <header class="site-header">
-    <a class="wordmark" href="#home" aria-label="Manav Tailor home">manav<span>®</span><i class="brand-dot"></i></a>
-    <nav aria-label="Main navigation"><a href="#work">Work <span>03</span></a><a href="#about">About</a><a href="#contact">Let's talk <span>↗</span></a></nav>
-    <button class="motion-toggle" id="motion" aria-pressed="false" aria-label="Pause decorative motion"><span class="motion-icon">Ⅱ</span><span class="motion-text">Motion on</span></button>
-  </header>
-  <main>
-    <section class="hero-scene" id="home" data-scene="hero">
-      <div class="hero-sticky">
-        <div class="hero-topline"><span class="eyebrow"><i></i> MANAV TAILOR / SOFTWARE DEVELOPER</span><span class="edition">FROM THE FIRST PIXEL TO THE LAST API.</span></div>
-        <div class="hero-layout">
-          <div class="hero-copy"><p class="role-label">FULL STACK SOFTWARE ENGINEER</p><h1>I build<br /><span class="moving-word">digital <svg viewBox="0 0 100 70" aria-hidden="true"><path d="M5 34h84M65 8l26 26-26 26" /></svg></span><br />experiences.<br /><em>Front to</em><br /><em>back.</em></h1></div>
-          <div class="machine" aria-hidden="true">
-            <div class="machine-grid"></div><div class="machine-shadow"></div>
-            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-            <div class="machine-assembly developer-fallback" id="machine-fallback"><div class="dev-editor"><div class="dev-editor-bar"><i></i><i></i><i></i><span>hello-world.tsx</span></div><pre><span>const</span> developer = {
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f1e8" />
+    <title>Manav Tailor</title>
+    <meta
+      name="description"
+      content="Manav Tailor's frontend developer and full stack developer portfolio. Explore React, Next.js, TypeScript, Node.js and GraphQL projects from Udaipur, India."
+    />
+    <meta name="author" content="Manav Tailor" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://manav-tailor.vercel.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:site_name" content="Manav Tailor" />
+    <meta property="og:title" content="Manav Tailor" />
+    <meta
+      property="og:description"
+      content="Frontend developer and full stack developer portfolio. React, Next.js, TypeScript, Node.js and GraphQL projects from Udaipur, India."
+    />
+    <meta property="og:url" content="https://manav-tailor.vercel.app/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Manav Tailor" />
+    <meta
+      name="twitter:description"
+      content="Frontend developer and full stack developer portfolio. Explore Manav Tailor's projects, experience and skills."
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://manav-tailor.vercel.app/#website",
+            "url": "https://manav-tailor.vercel.app/",
+            "name": "Manav Tailor",
+            "inLanguage": "en",
+            "publisher": { "@id": "https://manav-tailor.vercel.app/#person" }
+          },
+          {
+            "@type": "ProfilePage",
+            "@id": "https://manav-tailor.vercel.app/#profile",
+            "url": "https://manav-tailor.vercel.app/",
+            "name": "Manav Tailor",
+            "description": "Manav Tailor's frontend developer and full stack developer portfolio, featuring projects, experience and technical skills.",
+            "isPartOf": { "@id": "https://manav-tailor.vercel.app/#website" },
+            "mainEntity": { "@id": "https://manav-tailor.vercel.app/#person" }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://manav-tailor.vercel.app/#person",
+            "name": "Manav Tailor",
+            "url": "https://manav-tailor.vercel.app/",
+            "jobTitle": "Full Stack Software Developer",
+            "description": "Frontend developer and full stack developer based in Udaipur, India, building interfaces, APIs and database-backed applications.",
+            "homeLocation": { "@type": "Place", "name": "Udaipur, India" },
+            "knowsAbout": [
+              "Frontend development",
+              "Full stack development",
+              "React",
+              "Next.js",
+              "TypeScript",
+              "JavaScript",
+              "Node.js",
+              "Express",
+              "GraphQL",
+              "PostgreSQL"
+            ],
+            "sameAs": [
+              "https://github.com/ManavTailor",
+              "https://www.linkedin.com/in/manav-tailor-961821202/"
+            ]
+          }
+        ]
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#work">Skip to selected work</a>
+    <div class="page-progress" aria-hidden="true"><span></span></div>
+    <header class="site-header">
+      <a class="wordmark" href="#home" aria-label="Manav Tailor home"
+        >manav<span>®</span><i class="brand-dot"></i
+      ></a>
+      <nav aria-label="Main navigation">
+        <a href="#work">Work <span>03</span></a
+        ><a href="#about">About</a
+        ><a href="#contact">Let's talk <span>↗</span></a>
+      </nav>
+      <button
+        class="motion-toggle"
+        id="motion"
+        aria-pressed="false"
+        aria-label="Pause decorative motion"
+      >
+        <span class="motion-icon">Ⅱ</span
+        ><span class="motion-text">Motion on</span>
+      </button>
+    </header>
+    <main>
+      <section class="hero-scene" id="home" data-scene="hero">
+        <div class="hero-sticky">
+          <div class="hero-topline">
+            <span class="eyebrow"
+              ><i></i> MANAV TAILOR / FULL STACK DEVELOPER</span
+            ><span class="edition">FROM THE FIRST PIXEL TO THE LAST API.</span>
+          </div>
+          <div class="hero-layout">
+            <div class="hero-copy">
+              <p class="role-label">FULL STACK SOFTWARE ENGINEER</p>
+              <h1>
+                I build<br /><span class="moving-word"
+                  >digital
+                  <svg viewBox="0 0 100 70" aria-hidden="true">
+                    <path d="M5 34h84M65 8l26 26-26 26" /></svg></span
+                ><br />experiences.<br /><em>Front to</em><br /><em>back.</em>
+              </h1>
+            </div>
+            <div class="machine" aria-hidden="true">
+              <div class="machine-grid"></div>
+              <div class="machine-shadow"></div>
+              <div class="orbit orbit-one"></div>
+              <div class="orbit orbit-two"></div>
+              <div
+                class="machine-assembly developer-fallback"
+                id="machine-fallback"
+              >
+                <div class="dev-editor">
+                  <div class="dev-editor-bar">
+                    <i></i><i></i><i></i><span>hello-world.tsx</span>
+                  </div>
+                  <pre><span>const</span> developer = {
   name: <em>'Manav'</em>,
   stack: <em>'full-stack'</em>,
   mindset: <em>'keep building'</em>
 };
 
-<span>export default</span> Experience;</pre></div><div class="dev-interface"><span>01 / INTERFACE</span><b>Ideas.<br />Made real.</b><i>EXPLORE ↗</i></div><div class="dev-api"><span>API / CONNECTED</span><b>{ }</b><small>200 OK</small></div></div>
-            <div id="three-scene"></div>
-            <span class="object-note note-one"><i></i> thoughtful interfaces</span><span class="object-note note-two"><i></i> connected APIs</span>
-            <span class="machine-coordinate">01 / CODE → INTERFACE → EXPERIENCE</span><span class="machine-index">&lt;/&gt;</span>
+<span>export default</span> Experience;</pre>
+                </div>
+                <div class="dev-interface">
+                  <span>01 / INTERFACE</span><b>Ideas.<br />Made real.</b
+                  ><i>EXPLORE ↗</i>
+                </div>
+                <div class="dev-api">
+                  <span>API / CONNECTED</span><b>{ }</b><small>200 OK</small>
+                </div>
+              </div>
+              <div id="three-scene"></div>
+              <span class="object-note note-one"
+                ><i></i> thoughtful interfaces</span
+              ><span class="object-note note-two"><i></i> connected APIs</span>
+              <span class="machine-coordinate"
+                >01 / CODE → INTERFACE → EXPERIENCE</span
+              ><span class="machine-index">&lt;/&gt;</span>
+            </div>
+          </div>
+          <div class="hero-bottom">
+            <p>
+              Thoughtful interfaces.<br />Solid systems. A little bit of play.
+            </p>
+            <a class="round-link" href="#work"
+              ><span>Explore my work</span><b>↘</b></a
+            >
+            <div class="hero-location">
+              <span>BASED IN UDAIPUR, INDIA</span
+              ><a href="/Manav_Resume.pdf" download>Download résumé ↗</a>
+            </div>
+          </div>
+          <div class="scroll-cue">
+            <span>SCROLL FROM CODE TO EXPERIENCE</span
+            ><span class="scroll-line"></span
+            ><span class="scene-readout">00 → 01</span>
           </div>
         </div>
-        <div class="hero-bottom"><p>Thoughtful interfaces.<br />Solid systems. A little bit of play.</p><a class="round-link" href="#work"><span>Explore my work</span><b>↘</b></a><div class="hero-location"><span>BASED IN UDAIPUR, INDIA</span><a href="/Manav_Resume.pdf" download>Download résumé ↗</a></div></div>
-        <div class="scroll-cue"><span>SCROLL FROM CODE TO EXPERIENCE</span><span class="scroll-line"></span><span class="scene-readout">00 → 01</span></div>
+      </section>
+      <div class="ticker" aria-hidden="true">
+        <div>
+          <span>GOOD IDEAS DESERVE GOOD ENGINEERING</span><i>✳</i
+          ><span>A LITTLE CURIOUS. ALWAYS BUILDING.</span><i>✳</i
+          ><span>GOOD IDEAS DESERVE GOOD ENGINEERING</span><i>✳</i>
+        </div>
       </div>
-    </section>
-    <div class="ticker" aria-hidden="true"><div><span>GOOD IDEAS DESERVE GOOD ENGINEERING</span><i>✳</i><span>A LITTLE CURIOUS. ALWAYS BUILDING.</span><i>✳</i><span>GOOD IDEAS DESERVE GOOD ENGINEERING</span><i>✳</i></div></div>
-    <section class="work-intro section-pad" id="work"><div class="section-label"><span>01 / SELECTED WORK</span><span>A FEW THINGS I'VE HELPED BUILD</span></div><div class="section-heading"><h2>Made to work.<br /><span>Built to matter.</span></h2><p>Three different challenges.<br />Frontend polish. Backend thinking.</p></div></section>
+      <section class="work-intro section-pad" id="work">
+        <div class="section-label">
+          <span>01 / SELECTED WORK</span
+          ><span>A FEW THINGS I'VE HELPED BUILD</span>
+        </div>
+        <div class="section-heading">
+          <h2>Made to work.<br /><span>Built to matter.</span></h2>
+          <p>
+            Three different challenges.<br />Frontend polish. Backend thinking.
+          </p>
+        </div>
+      </section>
 
-    <section class="project-scene joy-scene" data-scene="joy" aria-labelledby="joy-title"><div class="project-sticky joy-director section-pad">
-      <div class="project-heading"><span>01 / JOY FASHION</span><a href="https://www.joyfashion.co.in/" target="_blank" rel="noopener noreferrer">OPEN LIVE PROJECT ?</a></div>
-      <div class="joy-cinematic"><div class="joy-overview"><span class="joy-overline">A SHOPPING EXPERIENCE. FROM MY SIDE OF THE SCREEN.</span><h3 id="joy-title">Joy<br /><em>Fashion.</em></h3><p>A full-stack storefront.<br />One little everyday story.</p><div class="project-tags"><span>Next.js</span><span>GraphQL</span><span>PostgreSQL</span></div><button class="case-link" data-project="joy">What I built <span>?</span></button></div>
-        <div id="joy-world" class="joy-art project-art"><div class="joy-static-desk" aria-hidden="true"><div class="static-desk-top"></div><div class="static-desk-leg"></div><div class="static-chair"></div><div class="static-person"><span></span><i></i></div></div><div id="joy-monitor-screen" class="joy-monitor-screen"><div class="joy-browser-bar"><span class="joy-browser-dots">? ? ?</span><div class="joy-browser-address"><span id="joy-typed-url">Search or enter website address</span><i class="joy-type-caret"></i></div></div><div class="joy-browser-content"><div class="joy-start-page"><span class="joy-start-mark">m.</span><strong>A good idea<br />starts with a click.</strong><span>LET'S EXPLORE JOY FASHION.</span></div><div class="joy-homepage"><iframe id="joy-live-preview" title="Joy Fashion homepage hero preview" data-src="https://www.joyfashion.co.in/" loading="lazy" tabindex="-1" aria-hidden="true" sandbox="allow-scripts allow-same-origin" referrerpolicy="strict-origin-when-cross-origin"></iframe><div class="joy-iframe-shield" aria-hidden="true"></div></div></div></div></div>
-      </div>
-      <div class="joy-story-footer"><div class="joy-story-beats" aria-label="Scroll story"><span data-beat="0" class="active">01 / ARRIVE</span><span data-beat="1">02 / SETTLE IN</span><span data-beat="2">03 / TYPE THE URL</span><span data-beat="3">04 / ENTER ?</span><span data-beat="4">05 / LIVE WEBSITE</span></div><div class="joy-enter-detail" aria-hidden="true"><span>ONE KEY. A LIVE EXPERIENCE.</span><b>Enter ?</b></div><div class="joy-story-caption"><span id="joy-story-caption">Every project starts with a little curiosity.</span><span class="joy-scroll-hint">KEEP SCROLLING ?</span></div></div>
-    </div></section>
+      <section
+        class="project-scene joy-scene"
+        data-scene="joy"
+        aria-labelledby="joy-title"
+      >
+        <div class="project-sticky joy-director section-pad">
+          <div class="project-heading">
+            <span>01 / JOY FASHION</span
+            ><a
+              href="https://www.joyfashion.co.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >OPEN LIVE PROJECT ?</a
+            >
+          </div>
+          <div class="joy-cinematic">
+            <div class="joy-overview">
+              <span class="joy-overline"
+                >A SHOPPING EXPERIENCE. FROM MY SIDE OF THE SCREEN.</span
+              >
+              <h3 id="joy-title">Joy<br /><em>Fashion.</em></h3>
+              <p>A full-stack storefront.<br />One little everyday story.</p>
+              <div class="project-tags">
+                <span>Next.js</span><span>GraphQL</span><span>PostgreSQL</span>
+              </div>
+              <button class="case-link" data-project="joy">
+                What I built <span>?</span>
+              </button>
+            </div>
+            <div id="joy-world" class="joy-art project-art">
+              <div class="joy-static-desk" aria-hidden="true">
+                <div class="static-desk-top"></div>
+                <div class="static-desk-leg"></div>
+                <div class="static-chair"></div>
+                <div class="static-person"><span></span><i></i></div>
+              </div>
+              <div id="joy-monitor-screen" class="joy-monitor-screen">
+                <div class="joy-browser-bar">
+                  <span class="joy-browser-dots">? ? ?</span>
+                  <div class="joy-browser-address">
+                    <span id="joy-typed-url"
+                      >Search or enter website address</span
+                    ><i class="joy-type-caret"></i>
+                  </div>
+                </div>
+                <div class="joy-browser-content">
+                  <div class="joy-start-page">
+                    <span class="joy-start-mark">m.</span
+                    ><strong>A good idea<br />starts with a click.</strong
+                    ><span>LET'S EXPLORE JOY FASHION.</span>
+                  </div>
+                  <div class="joy-homepage">
+                    <iframe
+                      id="joy-live-preview"
+                      title="Joy Fashion homepage hero preview"
+                      data-src="https://www.joyfashion.co.in/"
+                      loading="lazy"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      sandbox="allow-scripts allow-same-origin"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                    ></iframe>
+                    <div class="joy-iframe-shield" aria-hidden="true"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="joy-story-footer">
+            <div class="joy-story-beats" aria-label="Scroll story">
+              <span data-beat="0" class="active">01 / ARRIVE</span
+              ><span data-beat="1">02 / SETTLE IN</span
+              ><span data-beat="2">03 / TYPE THE URL</span
+              ><span data-beat="3">04 / ENTER ?</span
+              ><span data-beat="4">05 / LIVE WEBSITE</span>
+            </div>
+            <div class="joy-enter-detail" aria-hidden="true">
+              <span>ONE KEY. A LIVE EXPERIENCE.</span><b>Enter ?</b>
+            </div>
+            <div class="joy-story-caption">
+              <span id="joy-story-caption"
+                >Every project starts with a little curiosity.</span
+              ><span class="joy-scroll-hint">KEEP SCROLLING ?</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <section class="project-scene tdc-scene" data-scene="tdc" aria-labelledby="tdc-title"><div class="project-sticky section-pad"><div class="project-heading"><span>02 / ENTERPRISE</span><span class="project-category">COMPLEXITY, WITH A CLEAR PATH.</span></div><div class="project-layout"><div class="project-copy"><h3 id="tdc-title">TDC<br /><em>Commerce.</em></h3><p>Transactions to fulfilment.<br />APIs, data, and workflows in sync.</p><div class="project-tags"><span>React</span><span>TypeScript</span><span>GraphQL</span></div><button class="case-link" data-project="tdc">Inside the project <span>↗</span></button></div><div class="project-art conveyor-art" aria-hidden="true"><div class="conveyor-orbit"></div><div class="workflow-track"><span class="track-line"></span><div class="workflow-stop"><i>01</i><b>Transaction</b></div><div class="workflow-stop"><i>02</i><b>Fulfilment</b></div><div class="workflow-stop"><i>03</i><b>Shipment</b></div><div class="workflow-stop"><i>04</i><b>Tracking</b></div></div><div class="data-packet"><span>POST /orders</span><b>{ order }</b><small>200 OK / SYNCED</small></div><div class="workflow-ticket"><span>WORKFLOW / CONNECTED</span><strong>Connected APIs.<br />Clear workflows.</strong><div><i></i> Orders. Labels. Tracking.</div></div><span class="visual-label">ILLUSTRATIVE WORKFLOW</span></div></div><div class="project-bottom"><span>FEDEX / USPS / UPS INTEGRATIONS</span><span>FOLLOW THE DATA <i>→</i></span></div></div></section>
+      <section
+        class="project-scene tdc-scene"
+        data-scene="tdc"
+        aria-labelledby="tdc-title"
+      >
+        <div class="project-sticky section-pad">
+          <div class="project-heading">
+            <span>02 / ENTERPRISE</span
+            ><span class="project-category"
+              >COMPLEXITY, WITH A CLEAR PATH.</span
+            >
+          </div>
+          <div class="project-layout">
+            <div class="project-copy">
+              <h3 id="tdc-title">TDC<br /><em>Commerce.</em></h3>
+              <p>
+                Transactions to fulfilment.<br />APIs, data, and workflows in
+                sync.
+              </p>
+              <div class="project-tags">
+                <span>React</span><span>TypeScript</span><span>GraphQL</span>
+              </div>
+              <button class="case-link" data-project="tdc">
+                Inside the project <span>↗</span>
+              </button>
+            </div>
+            <div class="project-art conveyor-art" aria-hidden="true">
+              <div class="conveyor-orbit"></div>
+              <div class="workflow-track">
+                <span class="track-line"></span>
+                <div class="workflow-stop"><i>01</i><b>Transaction</b></div>
+                <div class="workflow-stop"><i>02</i><b>Fulfilment</b></div>
+                <div class="workflow-stop"><i>03</i><b>Shipment</b></div>
+                <div class="workflow-stop"><i>04</i><b>Tracking</b></div>
+              </div>
+              <div class="data-packet">
+                <span>POST /orders</span><b>{ order }</b
+                ><small>200 OK / SYNCED</small>
+              </div>
+              <div class="workflow-ticket">
+                <span>WORKFLOW / CONNECTED</span
+                ><strong>Connected APIs.<br />Clear workflows.</strong>
+                <div><i></i> Orders. Labels. Tracking.</div>
+              </div>
+              <span class="visual-label">ILLUSTRATIVE WORKFLOW</span>
+            </div>
+          </div>
+          <div class="project-bottom">
+            <span>FEDEX / USPS / UPS INTEGRATIONS</span
+            ><span>FOLLOW THE DATA <i>→</i></span>
+          </div>
+        </div>
+      </section>
 
-    <section class="project-scene food-scene" data-scene="food" aria-labelledby="food-title"><div class="project-sticky section-pad"><div class="project-heading"><span>03 / OPERATIONS</span><span class="project-category">GOOD FOOD. BETTER FLOW.</span></div><div class="project-layout"><div class="project-copy"><h3 id="food-title">Order<br /><em>up.</em></h3><p>A food delivery platform.<br />Built for the people behind the menu.</p><div class="project-tags"><span>Next.js</span><span>GraphQL</span><span>PostgreSQL</span></div><button class="case-link" data-project="food">Inside the project <span>↗</span></button></div><div class="project-art food-art" aria-hidden="true"><div class="food-orbit"></div><div class="food-dashboard"><div class="dashboard-top"><b>order up<span>✳</span></b><span>THE KITCHEN / OVERVIEW</span></div><div class="dashboard-body"><span>LET'S GET COOKING.</span><h4>A good day<br />starts here.</h4><div class="order-columns"><div><small>INCOMING</small><span class="order-card"><i>●</i> Fresh off the menu <b>01</b></span></div><div><small>IN THE KITCHEN</small><span class="order-card"><i>●</i> Made with care <b>02</b></span></div></div><div class="dashboard-menu"><span>MENUS</span><span>ORDERS</span><span>RESTAURANTS ↗</span></div></div></div><div class="food-token token-burger"><span>☰</span><small>MENU</small></div><div class="food-token token-order"><span>↗</span><small>ORDER</small></div><div class="food-token token-plate"><span>✳</span></div><span class="visual-label">ILLUSTRATIVE INTERFACE / NOT A PRODUCT SCREENSHOT</span></div></div><div class="project-bottom"><span>MENUS / AUTHENTICATION / ORDER MANAGEMENT</span><span>ALL THE RIGHT INGREDIENTS <i>✳</i></span></div></div></section>
+      <section
+        class="project-scene food-scene"
+        data-scene="food"
+        aria-labelledby="food-title"
+      >
+        <div class="project-sticky section-pad">
+          <div class="project-heading">
+            <span>03 / OPERATIONS</span
+            ><span class="project-category">GOOD FOOD. BETTER FLOW.</span>
+          </div>
+          <div class="project-layout">
+            <div class="project-copy">
+              <h3 id="food-title">Order<br /><em>up.</em></h3>
+              <p>
+                A food delivery platform.<br />Built for the people behind the
+                menu.
+              </p>
+              <div class="project-tags">
+                <span>Next.js</span><span>GraphQL</span><span>PostgreSQL</span>
+              </div>
+              <button class="case-link" data-project="food">
+                Inside the project <span>↗</span>
+              </button>
+            </div>
+            <div class="project-art food-art" aria-hidden="true">
+              <div class="food-orbit"></div>
+              <div class="food-dashboard">
+                <div class="dashboard-top">
+                  <b>order up<span>✳</span></b
+                  ><span>THE KITCHEN / OVERVIEW</span>
+                </div>
+                <div class="dashboard-body">
+                  <span>LET'S GET COOKING.</span>
+                  <h4>A good day<br />starts here.</h4>
+                  <div class="order-columns">
+                    <div>
+                      <small>INCOMING</small
+                      ><span class="order-card"
+                        ><i>●</i> Fresh off the menu <b>01</b></span
+                      >
+                    </div>
+                    <div>
+                      <small>IN THE KITCHEN</small
+                      ><span class="order-card"
+                        ><i>●</i> Made with care <b>02</b></span
+                      >
+                    </div>
+                  </div>
+                  <div class="dashboard-menu">
+                    <span>MENUS</span><span>ORDERS</span
+                    ><span>RESTAURANTS ↗</span>
+                  </div>
+                </div>
+              </div>
+              <div class="food-token token-burger">
+                <span>☰</span><small>MENU</small>
+              </div>
+              <div class="food-token token-order">
+                <span>↗</span><small>ORDER</small>
+              </div>
+              <div class="food-token token-plate"><span>✳</span></div>
+              <span class="visual-label"
+                >ILLUSTRATIVE INTERFACE / NOT A PRODUCT SCREENSHOT</span
+              >
+            </div>
+          </div>
+          <div class="project-bottom">
+            <span>MENUS / AUTHENTICATION / ORDER MANAGEMENT</span
+            ><span>ALL THE RIGHT INGREDIENTS <i>✳</i></span>
+          </div>
+        </div>
+      </section>
 
-    <section class="about section-pad" id="about" data-scene="about"><div class="section-label"><span>02 / THE DEVELOPER BEHIND THE CODE</span><span>HELLO AGAIN.</span></div><div class="about-intro"><div><h2>Curious by nature.<br /><em>Builder by choice.</em></h2><p class="about-lead">I'm Manav. I like figuring out how things fit together — and making them feel effortless to use.</p><p class="about-description">From interfaces people interact with to the APIs and databases underneath, I work across the stack to turn complex requirements into useful software.</p></div><div class="about-sculpture" aria-hidden="true"><div class="about-ring"></div><div class="about-block">{ }</div><span>ALWAYS A WORK IN PROGRESS.</span><i>✳</i></div></div><div class="journey-heading"><span>A FEW CHAPTERS SO FAR</span><span>2020 → ONWARDS</span></div><div class="timeline"><div class="timeline-path" aria-hidden="true"><span></span></div><article class="milestone"><span class="timeline-dot"></span><span class="milestone-date">2020 — 2024</span><div><h3>The foundations.</h3><h4>B.Tech · Computer Science</h4><p>Techno India NJR Institute of Technology.</p></div><span class="milestone-index">01</span></article><article class="milestone"><span class="timeline-dot"></span><span class="milestone-date">JUN — NOV 2022</span><div><h3>First steps into the web.</h3><h4>Web Developer Intern · CodePlanet Technologies</h4><p>Python, Django, MVC architecture, and database integration.</p></div><span class="milestone-index">02</span></article><article class="milestone"><span class="timeline-dot"></span><span class="milestone-date">APR — AUG 2023</span><div><h3>Getting closer to the business.</h3><h4>Salesforce Intern · TechForce Services</h4><p>Salesforce Administration, Lightning Platform, and CRM customisation.</p></div><span class="milestone-index">03</span></article><article class="milestone"><span class="timeline-dot"></span><span class="milestone-date">AUG 2023 — PRESENT*</span><div><h3>Connecting the whole stack.</h3><h4>Software Developer · TDC Consultancy</h4><p>Applications, backend services, and reusable interfaces. Working with engineering, design, and QA to bring the pieces together.</p></div><span class="milestone-index">04</span></article></div><p class="date-note">*Employment dates reflect the supplied résumé.</p></section>
+      <section class="about section-pad" id="about" data-scene="about">
+        <div class="section-label">
+          <span>02 / THE DEVELOPER BEHIND THE CODE</span
+          ><span>HELLO AGAIN.</span>
+        </div>
+        <div class="about-intro">
+          <div>
+            <h2>Curious by nature.<br /><em>Builder by choice.</em></h2>
+            <p class="about-lead">
+              I'm Manav Tailor, a frontend developer and full stack developer
+              based in Udaipur, India. I like figuring out how things fit
+              together — and making them feel effortless to use.
+            </p>
+            <p class="about-description">
+              This portfolio brings together my frontend and full stack
+              development work: React, Next.js and TypeScript interfaces
+              connected to Node.js, GraphQL APIs and PostgreSQL databases. I
+              turn complex requirements into useful software.
+            </p>
+          </div>
+          <div class="about-sculpture" aria-hidden="true">
+            <div class="about-ring"></div>
+            <div class="about-block">{ }</div>
+            <span>ALWAYS A WORK IN PROGRESS.</span><i>✳</i>
+          </div>
+        </div>
+        <div class="journey-heading">
+          <span>A FEW CHAPTERS SO FAR</span><span>2020 → ONWARDS</span>
+        </div>
+        <div class="timeline">
+          <div class="timeline-path" aria-hidden="true"><span></span></div>
+          <article class="milestone">
+            <span class="timeline-dot"></span
+            ><span class="milestone-date">2020 — 2024</span>
+            <div>
+              <h3>The foundations.</h3>
+              <h4>B.Tech · Computer Science</h4>
+              <p>Techno India NJR Institute of Technology.</p>
+            </div>
+            <span class="milestone-index">01</span>
+          </article>
+          <article class="milestone">
+            <span class="timeline-dot"></span
+            ><span class="milestone-date">JUN — NOV 2022</span>
+            <div>
+              <h3>First steps into the web.</h3>
+              <h4>Web Developer Intern · CodePlanet Technologies</h4>
+              <p>Python, Django, MVC architecture, and database integration.</p>
+            </div>
+            <span class="milestone-index">02</span>
+          </article>
+          <article class="milestone">
+            <span class="timeline-dot"></span
+            ><span class="milestone-date">APR — AUG 2023</span>
+            <div>
+              <h3>Getting closer to the business.</h3>
+              <h4>Salesforce Intern · TechForce Services</h4>
+              <p>
+                Salesforce Administration, Lightning Platform, and CRM
+                customisation.
+              </p>
+            </div>
+            <span class="milestone-index">03</span>
+          </article>
+          <article class="milestone">
+            <span class="timeline-dot"></span
+            ><span class="milestone-date">AUG 2023 — PRESENT*</span>
+            <div>
+              <h3>Connecting the whole stack.</h3>
+              <h4>Software Developer · TDC Consultancy</h4>
+              <p>
+                Applications, backend services, and reusable interfaces. Working
+                with engineering, design, and QA to bring the pieces together.
+              </p>
+            </div>
+            <span class="milestone-index">04</span>
+          </article>
+        </div>
+        <p class="date-note">*Employment dates reflect the supplied résumé.</p>
+      </section>
 
-    <section class="toolkit section-pad" id="toolkit" data-scene="toolkit"><div class="section-label"><span>03 / UNDER THE SURFACE</span><span>A CONNECTED TOOLKIT</span></div><div class="toolkit-layout"><div class="toolkit-copy"><h2>Different tools.<br /><em>One whole picture.</em></h2><p>Good interfaces need good foundations.<br />Here's how I connect the two.</p><div class="skill-groups"><article class="skill-group active" data-skill="frontend"><button class="skill-button" aria-pressed="true"><span>01</span> What you see. <b>↗</b></button><p>React · Next.js · TypeScript · JavaScript<br />HTML · CSS · Tailwind CSS · Ant Design</p></article><article class="skill-group" data-skill="backend"><button class="skill-button" aria-pressed="false"><span>02</span> What makes it work. <b>↗</b></button><p>Node.js · Express · GraphQL · TypeORM<br />PostgreSQL · MySQL · Redis · SQL</p></article><article class="skill-group" data-skill="workflow"><button class="skill-button" aria-pressed="false"><span>03</span> How it gets shipped. <b>↗</b></button><p>Git · GitHub · Docker · Postman<br />VS Code · Figma · Agile collaboration</p></article></div></div><div class="layer-machine" data-active="frontend" aria-hidden="true"><div class="layer layer-front"><span>01 / INTERFACE</span><b>↗</b><i></i><i></i><i></i></div><div class="layer layer-back"><span>02 / APIs & DATA</span><div class="engine-node"></div><div class="engine-node"></div><div class="engine-node"></div><strong>{ }</strong></div><div class="layer layer-flow"><span>03 / WORKFLOW</span><b>✳</b><div class="flow-line"></div></div><span class="layer-annotation">INTERFACE / API / DATA / DEPLOY.</span></div></div></section>
+      <section class="toolkit section-pad" id="toolkit" data-scene="toolkit">
+        <div class="section-label">
+          <span>03 / UNDER THE SURFACE</span><span>A CONNECTED TOOLKIT</span>
+        </div>
+        <div class="toolkit-layout">
+          <div class="toolkit-copy">
+            <h2>Different tools.<br /><em>One whole picture.</em></h2>
+            <p>
+              Good interfaces need good foundations.<br />Here's how I connect
+              the two.
+            </p>
+            <div class="skill-groups">
+              <article class="skill-group active" data-skill="frontend">
+                <button class="skill-button" aria-pressed="true">
+                  <span>01</span> What you see. <b>↗</b>
+                </button>
+                <p>
+                  React · Next.js · TypeScript · JavaScript<br />HTML · CSS ·
+                  Tailwind CSS · Ant Design
+                </p>
+              </article>
+              <article class="skill-group" data-skill="backend">
+                <button class="skill-button" aria-pressed="false">
+                  <span>02</span> What makes it work. <b>↗</b>
+                </button>
+                <p>
+                  Node.js · Express · GraphQL · TypeORM<br />PostgreSQL · MySQL
+                  · Redis · SQL
+                </p>
+              </article>
+              <article class="skill-group" data-skill="workflow">
+                <button class="skill-button" aria-pressed="false">
+                  <span>03</span> How it gets shipped. <b>↗</b>
+                </button>
+                <p>
+                  Git · GitHub · Docker · Postman<br />VS Code · Figma · Agile
+                  collaboration
+                </p>
+              </article>
+            </div>
+          </div>
+          <div class="layer-machine" data-active="frontend" aria-hidden="true">
+            <div class="layer layer-front">
+              <span>01 / INTERFACE</span><b>↗</b><i></i><i></i><i></i>
+            </div>
+            <div class="layer layer-back">
+              <span>02 / APIs & DATA</span>
+              <div class="engine-node"></div>
+              <div class="engine-node"></div>
+              <div class="engine-node"></div>
+              <strong>{ }</strong>
+            </div>
+            <div class="layer layer-flow">
+              <span>03 / WORKFLOW</span><b>✳</b>
+              <div class="flow-line"></div>
+            </div>
+            <span class="layer-annotation"
+              >INTERFACE / API / DATA / DEPLOY.</span
+            >
+          </div>
+        </div>
+      </section>
 
-    <section class="contact section-pad" id="contact" data-scene="contact"><div class="section-label"><span>04 / THE NEXT CHAPTER</span><span>STARTS WITH A CONVERSATION.</span></div><div class="contact-title"><h2>What should<br />we build <em>next?</em></h2><div class="contact-stamp" aria-hidden="true"><span>GOOD THINGS<br />START SOMEWHERE</span><b>↗</b></div></div><a class="contact-email" href="mailto:tailormanav68@gmail.com">tailormanav68@gmail.com <span>↗</span></a><div class="contact-bottom"><p>A new product. A technical challenge.<br />Or just a hello. I'm all ears.</p><div class="social-links"><a href="https://github.com/ManavTailor" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/manav-tailor-961821202/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="/Manav_Resume.pdf" download>Résumé ↗</a></div></div><footer><a class="wordmark" href="#home">manav<span>®</span></a><span>MADE WITH CURIOSITY. BUILT WITH CARE.</span><a href="#home">Back to the top ↑</a></footer></section>
-  </main>
-  <dialog id="project-dialog" aria-labelledby="dialog-title"><button class="dialog-close" aria-label="Close project details">×</button><span class="dialog-kicker" id="dialog-type"></span><h2 id="dialog-title"></h2><p class="dialog-summary" id="dialog-summary"></p><h3>WHAT I BUILT</h3><ul id="dialog-list"></ul><div id="dialog-link"></div></dialog>
-  <script type="module" src="/app.ts"></script>
-</body>
+      <section class="contact section-pad" id="contact" data-scene="contact">
+        <div class="section-label">
+          <span>04 / THE NEXT CHAPTER</span
+          ><span>STARTS WITH A CONVERSATION.</span>
+        </div>
+        <div class="contact-title">
+          <h2>What should<br />we build <em>next?</em></h2>
+          <div class="contact-stamp" aria-hidden="true">
+            <span>GOOD THINGS<br />START SOMEWHERE</span><b>↗</b>
+          </div>
+        </div>
+        <a class="contact-email" href="mailto:tailormanav68@gmail.com"
+          >tailormanav68@gmail.com <span>↗</span></a
+        >
+        <div class="contact-bottom">
+          <p>
+            A new product. A technical challenge.<br />Or just a hello. I'm all
+            ears.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://github.com/ManavTailor"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub ↗</a
+            ><a
+              href="https://www.linkedin.com/in/manav-tailor-961821202/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn ↗</a
+            ><a href="/Manav_Resume.pdf" download>Résumé ↗</a>
+          </div>
+        </div>
+        <footer>
+          <a class="wordmark" href="#home">manav<span>®</span></a
+          ><span>MADE WITH CURIOSITY. BUILT WITH CARE.</span
+          ><a href="#home">Back to the top ↑</a>
+        </footer>
+      </section>
+    </main>
+    <dialog id="project-dialog" aria-labelledby="dialog-title">
+      <button class="dialog-close" aria-label="Close project details">×</button
+      ><span class="dialog-kicker" id="dialog-type"></span>
+      <h2 id="dialog-title"></h2>
+      <p class="dialog-summary" id="dialog-summary"></p>
+      <h3>WHAT I BUILT</h3>
+      <ul id="dialog-list"></ul>
+      <div id="dialog-link"></div>
+    </dialog>
+    <script type="module" src="/app.ts"></script>
+  </body>
 </html>
